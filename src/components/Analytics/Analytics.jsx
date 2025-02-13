@@ -1,7 +1,6 @@
 import React from "react";
 import "./Analytics.css";
 import { cardsData } from "../../Data/Data";
-import { UilTimes } from "@iconscout/react-unicons";
 import Chart from "react-apexcharts";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";

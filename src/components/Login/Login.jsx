@@ -7,16 +7,29 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Simple validation
-    if (username === "admin" && password === "admin123") {
-      localStorage.setItem("isAuthenticated", "true");
-      navigate("/dashboard");
-    } else {
-      setError("Invalid username or password");
+    setError("");
+    setLoading(true);
+
+    try {
+      // Simulate API call delay
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      if (username === "admin" && password === "admin123") {
+        localStorage.setItem("isAuthenticated", "true");
+        localStorage.setItem("user", username);
+        navigate("/dashboard");
+      } else {
+        setError("Invalid username or password");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -37,6 +50,7 @@ const Login = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Enter username"
+              disabled={loading}
               required
             />
           </div>
@@ -47,12 +61,20 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password"
+              disabled={loading}
               required
             />
           </div>
-          <button type="submit" className="LoginButton">
-            Login
+          <button type="submit" className="LoginButton" disabled={loading}>
+            {loading ? "Logging in..." : "Login"}
           </button>
+          <div className="LoginHint">
+            <small>
+              Demo credentials: <br />
+              Username: admin <br />
+              Password: admin123
+            </small>
+          </div>
         </form>
       </div>
     </div>

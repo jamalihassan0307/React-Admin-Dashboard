@@ -10,6 +10,7 @@ const Sidebar = () => {
   const [selected, setSelected] = useState(0);
   const [expanded, setExpanded] = useState(true);
   const navigate = useNavigate();
+  const username = localStorage.getItem("user") || "Admin";
 
   const handleMenuClick = (item, index) => {
     setSelected(index);
@@ -40,6 +41,9 @@ const Sidebar = () => {
         <div className="logo">
           <span>Sh</span>
           <span>ops</span>
+          <div className="userInfo">
+            <small>Welcome, {username}</small>
+          </div>
         </div>
 
         <div className="menu">

@@ -88,10 +88,31 @@
   background: #e59518;
 }
 
+.LoginButton:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
 .ErrorMessage {
   color: red;
   text-align: center;
   background: #ffadad8f;
   padding: 0.5rem;
   border-radius: 0.5rem;
+}
+
+.LoginHint {
+  text-align: center;
+  color: var(--gray);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.LoginHint small {
+  opacity: 0.8;
+}
+
+.InputGroup input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
 }
