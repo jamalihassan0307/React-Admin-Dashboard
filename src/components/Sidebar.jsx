@@ -9,13 +9,12 @@ import { motion } from "framer-motion";
 const Sidebar = () => {
   const [selected, setSelected] = useState(0);
   const [expanded, setExpanded] = useState(true);
-  const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const storedUserData = localStorage.getItem("userData");
     if (storedUserData) {
-      setUserData(JSON.parse(storedUserData));
+      // setUserData(JSON.parse(storedUserData)); // Uncomment if you need to manage user data state
     }
   }, []);
 
