@@ -48,12 +48,6 @@ const Sidebar = () => {
       >
         <div className="logo">
           <span>Shops</span>
-          {expanded && userData && (
-            <div className="userInfo">
-              <small>Welcome, {userData.name}</small>
-              <small className="userEmail">{userData.email}</small>
-            </div>
-          )}
         </div>
 
         <div className="menu">
