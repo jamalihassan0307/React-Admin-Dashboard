@@ -4,8 +4,8 @@
 </div>
 
 <p align="center">
-    <a href="https://your-dashboard-demo-link.com" target="_blank">
-        <img alt="" src="https://img.shields.io/badge/Website-EA4C89?style=normal&logo=dribbble&logoColor=white" style="vertical-align:center" />
+    <a href="https://jamalihassan0307.github.io/React-Admin-Dashboard/" target="_blank">
+        <img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-EA4C89?style=normal&logo=dribbble&logoColor=white" style="vertical-align:center" />
     </a>
     <a href="https://github.com/your-username" target="_blank">
         <img alt="" src="https://img.shields.io/badge/GitHub-100000?style=normal&logo=github&logoColor=white" style="vertical-align:center" />
@@ -122,6 +122,8 @@ npm run build
 ```
 
 ## 🔐 Demo Access
+
+You can access the live demo of the project [here](https://jamalihassan0307.github.io/React-Admin-Dashboard/).
 
 ```json
 {
