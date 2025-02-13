@@ -20,8 +20,13 @@ const Login = () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       if (username === "admin" && password === "admin123") {
+        // Store user data as a JSON string
+        const userData = {
+          name: "Admin User",
+          email: "admin@example.com",
+        };
         localStorage.setItem("isAuthenticated", "true");
-        localStorage.setItem("user", username);
+        localStorage.setItem("userData", JSON.stringify(userData));
         navigate("/dashboard");
       } else {
         setError("Invalid username or password");
@@ -68,13 +73,6 @@ const Login = () => {
           <button type="submit" className="LoginButton" disabled={loading}>
             {loading ? "Logging in..." : "Login"}
           </button>
-          <div className="LoginHint">
-            <small>
-              Demo credentials: <br />
-              Username: admin <br />
-              Password: admin123
-            </small>
-          </div>
         </form>
       </div>
     </div>

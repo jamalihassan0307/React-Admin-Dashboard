@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
 import { useNavigate } from "react-router-dom";
 import { SidebarData } from "../Data/Data";
@@ -9,8 +9,15 @@ import { motion } from "framer-motion";
 const Sidebar = () => {
   const [selected, setSelected] = useState(0);
   const [expanded, setExpanded] = useState(true);
+  const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
-  const username = localStorage.getItem("user") || "Admin";
+
+  useEffect(() => {
+    const storedUserData = localStorage.getItem("userData");
+    if (storedUserData) {
+      setUserData(JSON.parse(storedUserData));
+    }
+  }, []);
 
   const handleMenuClick = (item, index) => {
     setSelected(index);
@@ -20,6 +27,7 @@ const Sidebar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("userData");
     navigate("/login");
   };
 
@@ -39,11 +47,13 @@ const Sidebar = () => {
         }}
       >
         <div className="logo">
-          <span>Sh</span>
-          <span>ops</span>
-          <div className="userInfo">
-            <small>Welcome, {username}</small>
-          </div>
+          <span>Shops</span>
+          {expanded && userData && (
+            <div className="userInfo">
+              <small>Welcome, {userData.name}</small>
+              <small className="userEmail">{userData.email}</small>
+            </div>
+          )}
         </div>
 
         <div className="menu">
