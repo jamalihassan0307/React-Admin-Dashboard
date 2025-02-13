@@ -5,12 +5,10 @@ import {
   UilUsersAlt,
   UilPackage,
   UilChart,
-  UilSignOutAlt,
 } from "@iconscout/react-unicons";
 
 // Analytics Cards imports
 import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 // Recent Card Imports
 import img1 from "../imgs/img1.png";
@@ -33,11 +31,11 @@ export const SidebarData = [
   },
   {
     icon: UilPackage,
-    heading: 'Products'
+    heading: "Products",
   },
   {
     icon: UilChart,
-    heading: 'Analytics'
+    heading: "Analytics",
   },
 ];
 
@@ -113,5 +111,126 @@ export const UpdatesData = [
     name: "Iron Man",
     noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
     time: "2 hours ago",
+  },
+];
+
+// Add this to your existing Data.js
+export const ordersData = [
+  {
+    orderId: "#123456",
+    customer: "John Doe",
+    product: "Laptop Pro",
+    amount: 999,
+    status: "completed",
+  },
+  {
+    orderId: "#123457",
+    customer: "Jane Smith",
+    product: "Smartphone X",
+    amount: 699,
+    status: "pending",
+  },
+  {
+    orderId: "#123458",
+    customer: "Bob Johnson",
+    product: "Tablet Mini",
+    amount: 449,
+    status: "processing",
+  },
+  {
+    orderId: "#123459",
+    customer: "Alice Brown",
+    product: "Smart Watch",
+    amount: 299,
+    status: "completed",
+  },
+  {
+    orderId: "#123460",
+    customer: "Charlie Wilson",
+    product: "Wireless Earbuds",
+    amount: 159,
+    status: "pending",
+  },
+];
+
+// Add more customers data
+export const customersData = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john@example.com",
+    spending: "$1,200",
+    orders: 12,
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "jane@example.com",
+    spending: "$850",
+    orders: 8,
+  },
+  {
+    id: 3,
+    name: "Bob Wilson",
+    email: "bob@example.com",
+    spending: "$350",
+    orders: 3,
+  },
+  {
+    id: 4,
+    name: "Alice Brown",
+    email: "alice@example.com",
+    spending: "$2,500",
+    orders: 15,
+  },
+  {
+    id: 5,
+    name: "Charlie Davis",
+    email: "charlie@example.com",
+    spending: "$630",
+    orders: 6,
+  },
+];
+
+export const productsData = [
+  {
+    id: 1,
+    name: "Laptop Pro",
+    category: "Electronics",
+    price: "$999",
+    stock: 50,
+    status: "In Stock",
+  },
+  {
+    id: 2,
+    name: "Smartphone X",
+    category: "Electronics",
+    price: "$699",
+    stock: 30,
+    status: "Low Stock",
+  },
+  {
+    id: 3,
+    name: "Wireless Earbuds",
+    category: "Accessories",
+    price: "$159",
+    stock: 100,
+    status: "In Stock",
+  },
+  {
+    id: 4,
+    name: "Smart Watch",
+    category: "Wearables",
+    price: "$299",
+    stock: 0,
+    status: "Out of Stock",
+  },
+  {
+    id: 5,
+    name: "Tablet Mini",
+    category: "Electronics",
+    price: "$449",
+    stock: 15,
+    status: "Low Stock",
   },
 ];

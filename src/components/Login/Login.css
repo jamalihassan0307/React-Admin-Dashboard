@@ -1,0 +1,97 @@
+.LoginWrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    106.37deg,
+    #ffe1bc 29.63%,
+    #ffcfd1 51.55%,
+    #f3c6f1 90.85%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginContainer {
+  background: rgba(255, 255, 255, 0.54);
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 13px 20px 0px #80808029;
+}
+
+.LogoSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.LogoSection img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.LogoSection h2 {
+  color: var(--black);
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.LoginForm h1 {
+  text-align: center;
+  color: var(--black);
+}
+
+.InputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.InputGroup label {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.InputGroup input {
+  padding: 0.8rem;
+  border: 1px solid rgba(128, 128, 128, 0.143);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.InputGroup input:focus {
+  border-color: var(--orange);
+}
+
+.LoginButton {
+  background: var(--orange);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.LoginButton:hover {
+  background: #e59518;
+}
+
+.ErrorMessage {
+  color: red;
+  text-align: center;
+  background: #ffadad8f;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}

@@ -1,25 +1,28 @@
 import React, { useState } from "react";
 import "./Card.css";
+import { motion, AnimatePresence } from "framer-motion";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { motion, AnimateSharedLayout } from "framer-motion";
 import { UilTimes } from "@iconscout/react-unicons";
 import Chart from "react-apexcharts";
 
 // parent Card
 
-const Card = (props) => {
+function Card(props) {
   const [expanded, setExpanded] = useState(false);
+
   return (
-    <AnimateSharedLayout>
-      {expanded ? (
-        <ExpandedCard param={props} setExpanded={() => setExpanded(false)} />
-      ) : (
-        <CompactCard param={props} setExpanded={() => setExpanded(true)} />
-      )}
-    </AnimateSharedLayout>
+    <motion.div layout className="Card">
+      <AnimatePresence>
+        {!expanded ? (
+          <CompactCard param={props} setExpanded={setExpanded} />
+        ) : (
+          <ExpandedCard param={props} setExpanded={setExpanded} />
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
-};
+}
 
 // Compact Card
 function CompactCard({ param, setExpanded }) {
@@ -115,7 +118,7 @@ function ExpandedCard({ param, setExpanded }) {
       <div style={{ alignSelf: "flex-end", cursor: "pointer", color: "white" }}>
         <UilTimes onClick={setExpanded} />
       </div>
-        <span>{param.title}</span>
+      <span>{param.title}</span>
       <div className="chartContainer">
         <Chart options={data.options} series={param.series} type="area" />
       </div>

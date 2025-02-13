@@ -1,0 +1,104 @@
+.Products {
+  padding: 1rem;
+}
+
+.Products > h1 {
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.ProductsHeader {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.AddProductBtn {
+  background: var(--orange);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.AddProductBtn:hover {
+  background: #e59518;
+}
+
+.ProductsTable {
+  background: white;
+  box-shadow: 0px 13px 20px 0px #80808029;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+
+.ProductsTable table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.ProductsTable th {
+  text-align: left;
+  padding: 1rem;
+  color: var(--black);
+  font-weight: bold;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.143);
+}
+
+.ProductsTable td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.143);
+}
+
+.status {
+  padding: 8px;
+  border-radius: 9px;
+  font-weight: bold;
+}
+
+.status.inStock {
+  background: rgb(145, 254, 159, 0.47);
+  color: green;
+}
+
+.status.lowStock {
+  background: #59bfff;
+  color: white;
+}
+
+.status.outStock {
+  background: #ffadad8f;
+  color: red;
+}
+
+.Actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.Actions svg {
+  cursor: pointer;
+}
+
+.Actions svg:hover {
+  color: var(--orange);
+}
+
+@media screen and (max-width: 1200px) {
+  .ProductsTable {
+    width: 170%;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ProductsTable {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23rem;
+  }
+}

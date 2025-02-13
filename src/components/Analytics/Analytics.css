@@ -1,0 +1,96 @@
+.Analytics {
+  padding: 1rem;
+}
+
+.Analytics > h1 {
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.AnalyticsCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.AnalyticsCard {
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.CardContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.CardChart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6rem;
+}
+
+.CardChart > span {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.CardDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+}
+
+.CardDetails > span:nth-child(2) {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.CardDetails > span:nth-child(3) {
+  font-size: 0.8rem;
+}
+
+.ChartContainer {
+  margin-top: 1rem;
+}
+
+.SalesOverview {
+  background: white;
+  box-shadow: 0px 13px 20px 0px #80808029;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  margin-top: 2rem;
+}
+
+.SalesOverview > h2 {
+  margin-bottom: 1rem;
+  color: var(--black);
+}
+
+.SalesChart {
+  height: 20rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .AnalyticsCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .AnalyticsCards {
+    grid-template-columns: 1fr;
+  }
+
+  .SalesChart {
+    height: 15rem;
+  }
+}

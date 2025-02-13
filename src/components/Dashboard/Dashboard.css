@@ -1,0 +1,8 @@
+.Dashboard {
+  padding: 1rem;
+}
+
+.Dashboard > h1 {
+  margin-bottom: 2rem;
+  color: var(--black);
+}
