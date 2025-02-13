@@ -11,9 +11,11 @@ import {
 import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
 
 // Recent Card Imports
-import img1 from "../imgs/img1.png";
+import img1 from "../imgs/img1.jpg";
 import img2 from "../imgs/img2.png";
-import img3 from "../imgs/img3.png";
+import img3 from "../imgs/img3.jpg";
+import img4 from "../imgs/img4.jpeg";
+import img5 from "../imgs/img5.jpg";
 
 // Sidebar Data
 export const SidebarData = [
