@@ -27,6 +27,17 @@ A feature-rich admin dashboard built with React.js, offering comprehensive analy
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=white)
 ![ApexCharts](https://img.shields.io/badge/ApexCharts-017AFC?style=for-the-badge)
 
+## 🔐 Demo Access
+
+You can access the live demo of the project [here](https://jamalihassan0307.github.io/React-Admin-Dashboard/).
+
+```json
+{
+  "username": "admin",
+  "password": "admin123"
+}
+```
+
 ## 📸 Screenshots
 
 ### Authentication
@@ -93,17 +104,6 @@ A feature-rich admin dashboard built with React.js, offering comprehensive analy
 - Role-based access control
 - Protected routes
 - Session management
-
-## 🔐 Demo Access
-
-You can access the live demo of the project [here](https://jamalihassan0307.github.io/React-Admin-Dashboard/).
-
-```json
-{
-  "username": "admin",
-  "password": "admin123"
-}
-```
 
 ## 📄 Project Structure
 
